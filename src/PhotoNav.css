@@ -1,0 +1,17 @@
+.photo-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.photo-nav li img {
+	width: 100%;
+	filter: grayscale(75%);
+	cursor: pointer;
+	transition: filter 300ms ease;
+}
+
+.photo-nav li img:hover {
+	filter: none;
+	transition: filter 300ms ease;
+}

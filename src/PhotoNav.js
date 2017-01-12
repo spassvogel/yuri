@@ -8,8 +8,9 @@ class PhotoNav extends Component {
 
 		this.handleClick = this.handleClick.bind(this);
 
+		let index = 0;
 		this.items = shuffle(this.props.photos).map(photo => <li key={photo.thumb}>
-			<img src={ this.props.basePath + "/" + photo.thumb } alt={"Photo by " + photo.author} onClick={this.handleClick}/>
+			<img src={ this.props.basePath + "/" + photo.thumb } alt={"Photo by " + photo.author} data-index={index++} onClick={this.handleClick}/>
 		</li>);
 	}
 

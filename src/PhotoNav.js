@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import './PhotoNav.css';
+import shuffle from 'shuffle-array';
 
 class PhotoNav extends Component {
 	constructor(props) {
@@ -7,11 +8,11 @@ class PhotoNav extends Component {
 	}
 
 	render() {
-		const items = this.props.photos.map(photo => <li>
-			<img src={ this.props.basePath + "/" + photo.thumb }/>
+		const items = shuffle(this.props.photos).map(photo => <li key={photo.thumb}>
+			<img src={ this.props.basePath + "/" + photo.thumb } alt={"Photo by " + photo.author }/>
 		</li>);
 
-		return <ul>
+		return <ul className="photo-nav">
 			{items}
 		</ul>;
 	}

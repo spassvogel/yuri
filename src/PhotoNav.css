@@ -9,6 +9,7 @@
 	filter: grayscale(75%);
 	cursor: pointer;
 	transition: filter 300ms ease;
+	margin-bottom: 2px;
 }
 
 .photo-nav li img:hover {

@@ -20,7 +20,7 @@ class App extends Component {
 	}
 
 	render() {
-
+		const instructionText = "Press space to start/stop slideshow";
 		return (
 			<div className="app">
 					<section className="main">
@@ -36,7 +36,9 @@ class App extends Component {
 					<div className="content">
 						<img src={this.currentImageSrc}/>
 						<h1 className="author">{this.currentImageAuthor}</h1>
-						<p className="text">{this.currentImageText}</p>
+						<div className="text">
+							<span>{this.currentImage ? this.currentImageText : instructionText }</span>
+						</div>
 					</div>
 			</div>
 		);
@@ -48,25 +50,29 @@ class App extends Component {
 		});
 	}
 
+	get currentImage() {
+		return this.findImageByID(this.state.currentImage);
+	}
+
 	get currentImageSrc() {
 		if(this.state.currentImage === ""){
 			return null;
 		}
-		return this.props.imageBasePath + "/" + this.findImageByID(this.state.currentImage).thumb;
+		return this.props.imageBasePath + "/" + this.currentImage.thumb;
 	}
 
 	get currentImageAuthor() {
 		if(this.state.currentImage === ""){
 			return null;
 		}
-		return this.findImageByID(this.state.currentImage).author;
+		return this.currentImage.author;
 	}
 
 	get currentImageText() {
 		if(this.state.currentImage === ""){
 			return null;
 		}
-		return this.findImageByID(this.state.currentImage).text;
+		return this.currentImage.text;
 	}
 
 	findImageByID(id) {

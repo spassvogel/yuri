@@ -185,9 +185,184 @@ const	images = [{
 				author: "Lot Wagener",
 				thumb: "lot/P5185740.JPG",
 				text: "Uit india met Joost"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Berlijn Interrailen 2008 2.JPG",
+				text: "Berlijn Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Berlijn Interrailen 2008 3.JPG",
+				text: "Berlijn Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Berlijn Interrailen 2008 4.JPG",
+				text: "Berlijn Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Berlijn Interrailen 2008 1.JPG",
+				text: "Berlijn Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Cris Liebing Club WATT okt 2008.JPG",
+				text: "Cris Liebing Club WATT okt 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Danceparade Rotterdam 2008.JPG",
+				text: "Danceparade Rotterdam 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - enschede november 2008.JPG",
+				text: "Enschede november 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Hongarije Interrailen 2008.JPG",
+				text: "Hongarije Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Hongarije Interrailen 2008 1.JPG",
+				text: "Hongarije Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Hongarije Interrailen 2008 2.JPG",
+				text: "Hongarije Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - housewarming meere 2008.jpg",
+				text: "Housewarming meere 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - MindFuckMonday Festival mei 2008.jpeg",
+				text: "MindFuckMonday Festival mei 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Pohoda Festival 2008.JPG",
+				text: "Pohoda Festival 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Pohoda Festival Air bar 2008.JPG",
+				text: "Pohoda Festival 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Praag Interrailen 2008.JPG",
+				text: "Praag Interrailen 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Ruigoord 29 maart 08.JPG",
+				text: "Ruigoord 29 maart 08"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Scheveningen met Eduad mei 2008.JPG",
+				text: "Scheveningen met Eduad mei 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Het Pageshuis - Thuis-Strijkijzer juni 2008.JPG",
+				text: "Thuis strijkijzer 2008"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Marlies Westra - IMG_6589.JPG"
+			}, {
+				author: "Marlies Westra",
+				thumb: "marlies/Marlies Westra - IMG_6593.JPG"
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/1. Jopen Merijn & Jur.JPG",
+				text: "Foto van mij en Juriaan in 2012 in de Jopenkerk in Haarlem."
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/2. nutshell festival 2006 002.jpg",
+				text: "Het eerste fotomateriaal wat ik dan ook heb is uit 2006 toen ik heb helpen meeorganiseren samen met Ralph, Irfaan, Yorrit en Juriaan met een klein 'festival' in de tuin van het huis in Nootdorp voor onze vrienden. We noemde het het Nutshell Festival. "
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/2. nutshell festival 2006 023.jpg",
+				text: "Het eerste fotomateriaal wat ik dan ook heb is uit 2006 toen ik heb helpen meeorganiseren samen met Ralph, Irfaan, Yorrit en Juriaan met een klein 'festival' in de tuin van het huis in Nootdorp voor onze vrienden. We noemde het het Nutshell Festival. "
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/2. nutshell festival 2006 046.jpg",
+				text: "Het eerste fotomateriaal wat ik dan ook heb is uit 2006 toen ik heb helpen meeorganiseren samen met Ralph, Irfaan, Yorrit en Juriaan met een klein 'festival' in de tuin van het huis in Nootdorp voor onze vrienden. We noemde het het Nutshell Festival. "
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/2. nutshell festival 2006 080.jpg",
+				text: "Het eerste fotomateriaal wat ik dan ook heb is uit 2006 toen ik heb helpen meeorganiseren samen met Ralph, Irfaan, Yorrit en Juriaan met een klein 'festival' in de tuin van het huis in Nootdorp voor onze vrienden. We noemde het het Nutshell Festival. "
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/2. nutshell festival 2006 109.jpg",
+				text: "Het eerste fotomateriaal wat ik dan ook heb is uit 2006 toen ik heb helpen meeorganiseren samen met Ralph, Irfaan, Yorrit en Juriaan met een klein 'festival' in de tuin van het huis in Nootdorp voor onze vrienden. We noemde het het Nutshell Festival. "
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/2. nutshell festival 2006 114.jpg",
+				text: "Het eerste fotomateriaal wat ik dan ook heb is uit 2006 toen ik heb helpen meeorganiseren samen met Ralph, Irfaan, Yorrit en Juriaan met een klein 'festival' in de tuin van het huis in Nootdorp voor onze vrienden. We noemde het het Nutshell Festival. "
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/2. nutshell festival 2006 148.jpg",
+				text: "Het eerste fotomateriaal wat ik dan ook heb is uit 2006 toen ik heb helpen meeorganiseren samen met Ralph, Irfaan, Yorrit en Juriaan met een klein 'festival' in de tuin van het huis in Nootdorp voor onze vrienden. We noemde het het Nutshell Festival. "
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/4. Bij Filiz.jpg",
+				text: "Bij Filiz (gezamelijk vriendin en ex van Ralph) op de boerderij was."
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/4. Bij Filiz 2.jpg",
+				text: "Bij Filiz (gezamelijk vriendin en ex van Ralph) op de boerderij was."
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/5. Mindfuck Monday 1.jpg",
+				text: "We kwamen graag naar Den Haag voor de Mindfuck Monday avonden die Juriaan organiseerde"
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/5. Mindfuck Monday 2.jpg",
+				text: "We kwamen graag naar Den Haag voor de Mindfuck Monday avonden die Juriaan organiseerde"
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/6. Onmiversum 1.JPG",
+				text: "Om een winter-middag naar het Omniversum te gaan"
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/6. Omniversum 2.JPG",
+				text: "Om een winter-middag naar het Omniversum te gaan"
+			}, {
+				author: "Merijn Hoogenstrijd",
+				thumb: "merijn/7. Jopen Rebecca & Jur.JPG",
+				text: "De laatste keer dat ik hij eventjes in Haarlem langskwam bij mij en mijn ex was in januari 2012 voor een biertje met ons bij de Jopen Brouwerij in Haarlem "
+			}, {
+				author: "Noortje Weenink",
+				thumb: "noortje/DSCF0243.JPG",
+				text: "Ik kende Juriaan eigenlijk alleen van de ene week Berlijn bij Maarten, een die week heeft altijd een speciaal plekje in mijn hart gehouden. (Vrijwel) niemand kende elkaar, maar ik had het gevoel dat we allemaal al jaren vrienden waren. "
+			}, {
+				author: "Noortje Weenink",
+				thumb: "noortje/DSCF0258.JPG",
+				text: "De zeer discutabele foto's vatten de week vol  rare capriolen en het onveilig maken van de Berlijnse metro wel samen denk ik zo. :) En Juriaan, manman, hij was echt zo'n persoon die de wereld een beetje beter achter heeft gelaten. Iemand om tegen op te kijken, van te leren en plezier mee te hebben. Allemaal in één."
+			}, {
+				author: "Patricia Villamor",
+				thumb: "patricia/15127585_10210613625474084_1006786175_o.jpg",
+				text: "At a sound system in roterdam this summer (2016)"
+			}, {
+				author: "Patricia Villamor",
+				thumb: "patricia/15233597_10210613621833993_490546203_o.jpg",
+				text: "At a sound system in roterdam this summer (2016)"
+			}, {
+				author: "Roman Stein",
+				thumb: "roman/0425.jpg",
+				text: "Me and my sister met Juri the first time in San Martin de los Andes in Argentina, where we did together a trek for a couple of days. We had some trouble to find the way and nearly got lost. If i would have done this trekking only with my sister, we would have had a dispute the whole time. With Juri the situation was more peaceful. (2004)"
+			}, {
+				author: "Roman Stein",
+				thumb: "roman/0438.jpg",
+				text: "Me and my sister met Juri the first time in San Martin de los Andes in Argentina, where we did together a trek for a couple of days. We had some trouble to find the way and nearly got lost. If i would have done this trekking only with my sister, we would have had a dispute the whole time. With Juri the situation was more peaceful. (2004)"
+			}, {
+				author: "Roman Stein",
+				thumb: "roman/0455.jpg",
+				text: "Me and my sister met Juri the first time in San Martin de los Andes in Argentina, where we did together a trek for a couple of days. We had some trouble to find the way and nearly got lost. If i would have done this trekking only with my sister, we would have had a dispute the whole time. With Juri the situation was more peaceful. (2004)"
+			}, {
+				author: "Roman Stein",
+				thumb: "roman/0471.jpg",
+				text: "Me and my sister met Juri the first time in San Martin de los Andes in Argentina, where we did together a trek for a couple of days. We had some trouble to find the way and nearly got lost. If i would have done this trekking only with my sister, we would have had a dispute the whole time. With Juri the situation was more peaceful. (2004)"
+			}, {
+				author: "Roman Stein",
+				thumb: "roman/20151229_225944.jpg",
+				text: " Last year at Christmas Juri visited me and stayed at my house for one week. I was very grateful that he visited me, because i had a very hard year. We had some nice days together and a lot of fun. The picture shows Juri with a friend of mine in a bar in Munich. (2015)"
+
 			}];
 
 ReactDOM.render(
-  <App imageBasePath={imageBasePath} images={images}/>,
+  <App imageBasePath={imageBasePath} images={images} />,
   document.getElementById('root')
 );

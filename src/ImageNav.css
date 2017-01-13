@@ -6,18 +6,19 @@
 
 .image-nav li img {
 	width: 100%;
-	height: 100%;
-	filter: grayscale(75%);
+	max-height: 100%;
+	filter: grayscale(100%);
 	cursor: pointer;
-	transition: filter 300ms ease;
+	transition: filter 300ms ease,  max-height 300ms ease;
 	margin-bottom: 2px;
 }
-/*
+
 .image-nav li img.selected {
-	height: 20px;
-}*/
+	transition: margin 300ms ease;
+	margin-left: -6px;
+}
 
 .image-nav li img:hover {
-	filter: none;
+	filter: grayscale(75%);
 	transition: filter 300ms ease;
 }

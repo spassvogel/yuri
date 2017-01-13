@@ -18,10 +18,12 @@ class App extends Component {
 		return (
 			<div className="app">
 					<section className="main">
-						<img src={this.state.currentImage}/>
+						<div className="wrap">
+							<img src={this.state.currentImage}/>
+						</div>
 					</section>
 					<nav className="nav right">
-						<ImageNav images={this.props.imagess} 
+						<ImageNav images={this.props.images} 
 							basePath={this.props.imageBasePath} 
 							onImageClick={this.selectImage}
 							selectedImage={this.state.currentImage}

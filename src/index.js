@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
-const	photoBasePath = "resources/photos/";
-const	photos = [{
+const	imageBasePath = "resources/photos/";
+const	images = [{
 				author: "Diana Trejos Herrera",
 				thumb: "diana/IMG_7776.JPG"
 			}, {
@@ -188,6 +188,6 @@ const	photos = [{
 			}];
 
 ReactDOM.render(
-  <App photoBasePath={photoBasePath} photos={photos}/>,
+  <App imageBasePath={imageBasePath} images={images}/>,
   document.getElementById('root')
 );

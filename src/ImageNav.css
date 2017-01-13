@@ -1,18 +1,23 @@
-.photo-nav {
+.image-nav {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.photo-nav li img {
+.image-nav li img {
 	width: 100%;
+	height: 100%;
 	filter: grayscale(75%);
 	cursor: pointer;
 	transition: filter 300ms ease;
 	margin-bottom: 2px;
 }
+/*
+.image-nav li img.selected {
+	height: 20px;
+}*/
 
-.photo-nav li img:hover {
+.image-nav li img:hover {
 	filter: none;
 	transition: filter 300ms ease;
 }

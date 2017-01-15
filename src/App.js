@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ImageNav from './ImageNav';
 
@@ -8,7 +7,8 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			currentImage: ""
+			currentImage: "",
+			playing: false
 		}
 
 		for (var image of this.props.images){
@@ -17,6 +17,7 @@ class App extends Component {
 		}
 
 		this.selectImage = this.selectImage.bind(this);
+		this.handleKeyboardInput = this.handleKeyboardInput.bind(this);
 	}
 
 	render() {
@@ -26,7 +27,9 @@ class App extends Component {
 					<section className="main">
 					</section>
 					<nav className="nav right">
-						<ImageNav images={this.props.images}
+						<ImageNav
+							ref="imageNav" 
+							images={this.props.images}
 							basePath={this.props.imageBasePath}
 							onImageClick={this.selectImage}
 							selectedImage={this.state.currentImage}
@@ -34,7 +37,7 @@ class App extends Component {
 					</nav>
 
 					<div className="content">
-						<img src={this.currentImageSrc}/>
+						{ this.currentImage && <img src={this.currentImageSrc} alt="1{{this.currentImageAuthor}}"/> }
 						<h1 className="author">{this.currentImageAuthor}</h1>
 						<div className="text">
 							<span>{this.currentImage ? this.currentImageText : instructionText }</span>
@@ -49,6 +52,41 @@ class App extends Component {
 			currentImage: id
 		});
 	}
+
+	componentDidUpdate(prevProps, prevState) {
+		if(!prevState.playing && this.state.playing){
+			this.intervalId = window.setInterval(() => {
+				this.refs.imageNav.selectNext();
+			}, 2000);
+		}
+		else if (!this.state.playing){
+      		window.clearInterval(this.intervalId);			
+		}
+//		console.log(prevState)
+	}
+
+    componentDidMount() {
+        window.addEventListener('keydown', this.handleKeyboardInput);
+    }
+
+	componentWillUnmount() {
+        window.removeEventListener('keydown', this.handleKeyboardInput);
+
+		if (this.intervalId) {
+      		window.clearInterval(this.intervalId);
+      		this.intervalId = null;
+    	}
+    }
+
+	handleKeyboardInput(e) {
+		if(e.code === "Space"){
+			this.setState({
+				playing: !this.state.playing
+			});
+
+			e.preventDefault();
+		}
+    }
 
 	get currentImage() {
 		return this.findImageByID(this.state.currentImage);
@@ -85,3 +123,8 @@ class App extends Component {
 }
 
 export default App;
+
+App.propTypes = {
+  images: React.PropTypes.array,
+  imageBasePath: React.PropTypes.string
+};

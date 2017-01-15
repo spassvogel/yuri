@@ -36,7 +36,15 @@ class ImageNav extends Component {
 		}
 	}
 
-	selectImage(src) {
+	selectNext() {		
+		for(var i = 0; i < this.items.length; i++){
+			if(this.items[i].id === this.props.selectedImage && i < this.items.length - 1){
+				this.props.onImageClick(this.items[i+1].id);
+				return;
+			}
+		}
+		this.props.onImageClick(this.items[0].id);
+
 	}
 }
 export default ImageNav;

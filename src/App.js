@@ -57,7 +57,7 @@ class App extends Component {
 		if(!prevState.playing && this.state.playing){
 			this.intervalId = window.setInterval(() => {
 				this.refs.imageNav.selectNext();
-			}, 2000);
+			}, this.props.slideshowDuration);
 		}
 		else if (!this.state.playing){
       		window.clearInterval(this.intervalId);			
@@ -126,5 +126,10 @@ export default App;
 
 App.propTypes = {
   images: React.PropTypes.array,
-  imageBasePath: React.PropTypes.string
+  imageBasePath: React.PropTypes.string,
+  slideshowDuration: React.PropTypes.number
+};
+
+App.defaultProps = {
+	slideshowDuration: 5000
 };

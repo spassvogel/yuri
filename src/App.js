@@ -54,7 +54,8 @@ class App extends Component {
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-		if(!prevState.playing && this.state.playing){
+		if(/*!prevState.playing && */this.state.playing){
+			window.clearInterval(this.intervalId);
 			this.intervalId = window.setInterval(() => {
 				this.refs.imageNav.selectNext();
 			}, this.props.slideshowDuration);
@@ -62,7 +63,6 @@ class App extends Component {
 		else if (!this.state.playing){
       		window.clearInterval(this.intervalId);			
 		}
-//		console.log(prevState)
 	}
 
     componentDidMount() {
@@ -79,10 +79,9 @@ class App extends Component {
     }
 
 	handleKeyboardInput(e) {
-		if(e.code === "Space"){
-			this.setState({
-				playing: !this.state.playing
-			});
+		if(this.props.keymap[e.code]){
+
+			this[this.props.keymap[e.code]]();
 
 			e.preventDefault();
 		}
@@ -113,6 +112,30 @@ class App extends Component {
 		return this.currentImage.text;
 	}
 
+	/** 
+	 * Toggles between playing and paused	*/
+	playPause() {
+		this.setState({
+			playing: !this.state.playing
+		});
+	}
+
+	/** 
+	* Selects the next image */
+	next() {
+		if(this.currentImage){
+			this.refs.imageNav.selectNext();
+		}
+	}
+
+	/** 
+	* Selects the previous image */
+	previous() {
+		if(this.currentImage){
+			this.refs.imageNav.selectPrevious();
+		}
+	}
+
 	findImageByID(id) {
 		for (var image of this.props.images){
 			if(image.id === id){
@@ -127,9 +150,16 @@ export default App;
 App.propTypes = {
   images: React.PropTypes.array,
   imageBasePath: React.PropTypes.string,
-  slideshowDuration: React.PropTypes.number
+  slideshowDuration: React.PropTypes.number,
+  keymap: React.PropTypes.object
 };
 
 App.defaultProps = {
-	slideshowDuration: 5000
+	slideshowDuration: 5000,
+	keymap: {
+	// key code :  function name
+		"Space": "playPause",
+		"ArrowDown": "next",
+		"ArrowUp": "previous"
+	}
 };

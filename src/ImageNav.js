@@ -37,14 +37,27 @@ class ImageNav extends Component {
 	}
 
 	selectNext() {		
-		for(var i = 0; i < this.items.length; i++){
-			if(this.items[i].id === this.props.selectedImage && i < this.items.length - 1){
-				this.props.onImageClick(this.items[i+1].id);
-				return;
-			}
+		var nextIndex = this.getImageIndex(this.props.selectedImage);
+		if(++nextIndex === this.items.length){
+			nextIndex = 0;
 		}
-		this.props.onImageClick(this.items[0].id);
+		this.props.onImageClick(this.items[nextIndex].id);
+	}
 
+	selectPrevious() {		
+		var prevIndex = this.getImageIndex(this.props.selectedImage);
+		if(--prevIndex === -1){
+			prevIndex = this.items.length-1;
+		}
+		this.props.onImageClick(this.items[prevIndex].id);
+	}
+
+	getImageIndex(imageID) {
+		for(var i = 0; i < this.items.length; i++){
+			if(this.items[i].id === imageID){
+				return i;
+			}
+		}	
 	}
 }
 export default ImageNav;

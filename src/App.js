@@ -21,7 +21,7 @@ class App extends Component {
 	}
 
 	render() {
-		const instructionText = "Press space to start/sto	p slideshow";
+		const instructionText = "Press space to start/stop slideshow";
 
 		return (
 			<div className="app">
@@ -47,7 +47,6 @@ class App extends Component {
 						<i className={`fa ${this.state.playing ? 'fa-play-circle-o' : 'fa-pause-circle-o'} play-pause-icon `} 
 							aria-hidden="true"
 							ref={(cmp) => { this.iconPlayPause = cmp; }}
-							style= { { visibility: this.currentImage ? "visible" : "hidden" }} 
 						/>
 						
 					</div>

@@ -19,7 +19,7 @@ class ImageNav extends Component {
 					src={ this.props.basePath + "/" + image.thumb }
 					data-id={image.id}
 					className={ this.props.selectedImage === image.id ? "selected" : "" }
-					alt={"Image by " + image.author}
+					alt={ "by " + image.author }
 					onClick={this.handleClick}
 				/>
 			</li>)}
@@ -32,7 +32,7 @@ class ImageNav extends Component {
 			this.props.onImageClick(id);
 			scrollToElement(e.target, {
 				align: "middle"
-			})
+			});
 		}
 	}
 
@@ -42,6 +42,9 @@ class ImageNav extends Component {
 			nextIndex = 0;
 		}
 		this.props.onImageClick(this.items[nextIndex].id);
+		scrollToElement("img[data-id=\"" + this.items[nextIndex].id + "\"]", {
+			align: "middle"
+		});
 	}
 
 	selectPrevious() {		
@@ -50,6 +53,9 @@ class ImageNav extends Component {
 			prevIndex = this.items.length-1;
 		}
 		this.props.onImageClick(this.items[prevIndex].id);
+		scrollToElement("img[data-id=\"" + this.items[prevIndex].id + "\"]", {
+			align: "middle"
+		});
 	}
 
 	getImageIndex(imageID) {

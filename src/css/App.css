@@ -110,6 +110,7 @@ body {
 @keyframes pop {
   0% {
     opacity: 1;
+	visibility: visible;
   }
   15% {
     -webkit-transform: scale(1.5);
@@ -130,4 +131,5 @@ body {
     margin-top: 50vh;
 	font-size: 10em;
 	color: #ffffff;
+	visibility: hidden;
 }

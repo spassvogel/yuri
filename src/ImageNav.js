@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ImageNav.css';
+import './css/ImageNav.css';
 import shuffle from 'shuffle-array';
 import scrollToElement from 'scroll-to-element';
 

@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
+import './css/Pop.css';
 import ImageNav from './ImageNav';
+// import './font-awesome/css/font-awesome.min.css';
+// import './font-awesome/fonts/FontAwesome.otf';
+// import './font-awesome/fonts/fontawesome-webfont.eot';
+// import './font-awesome/fonts/fontawesome-webfont.svg';
+// import './font-awesome/fonts/fontawesome-webfont.ttf';
+// import './font-awesome/fonts/fontawesome-webfont.woff';
+// import './font-awesome/fonts/fontawesome-webfont.woff2';
 
 class App extends Component {
 	constructor(props) {
@@ -21,7 +29,8 @@ class App extends Component {
 	}
 
 	render() {
-		const instructionText = "Press space to start/stop slideshow";
+		const instructionText = "Press space to start/sto	p slideshow";
+
 		return (
 			<div className="app">
 					<section className="main">
@@ -37,11 +46,16 @@ class App extends Component {
 					</nav>
 
 					<div className="content">
-						{ this.currentImage && <img src={this.currentImageSrc} alt="1{{this.currentImageAuthor}}"/> }
+
+						{ this.currentImage && <img src={this.currentImageSrc} alt="{{this.currentImageAuthor}}"/> }
 						<h1 className="author">{this.currentImageAuthor}</h1>
 						<div className="text">
 							<span>{this.currentImage ? this.currentImageText : instructionText }</span>
 						</div>
+						<i className={`fa ${this.state.playing ? 'fa-pause-circle-o' : 'fa-play-circle-o'} play-pause-icon `} 
+							aria-hidden="true"
+							ref={(cmp) => { if(!this.iconPlayPause) this.iconPlayPause = cmp; }} />
+						/>
 					</div>
 			</div>
 		);
@@ -59,10 +73,19 @@ class App extends Component {
 			this.intervalId = window.setInterval(() => {
 				this.refs.imageNav.selectNext();
 			}, this.props.slideshowDuration);
+
+			if(!prevState.playing){
+				this.restartPlayPauseAnimation();
+			}
 		}
 		else if (!this.state.playing){
-      		window.clearInterval(this.intervalId);			
+      		window.clearInterval(this.intervalId);
+
+			if(prevState.playing){
+				this.restartPlayPauseAnimation();
+			}
 		}
+
 	}
 
     componentDidMount() {
@@ -86,6 +109,13 @@ class App extends Component {
 			e.preventDefault();
 		}
     }
+
+	restartPlayPauseAnimation() {
+		const element = this.iconPlayPause;	
+		element.classList.remove('pop-animation')
+		void element.offsetWidth // triggering reflow
+		element.classList.add('pop-animation')
+	}
 
 	get currentImage() {
 		return this.findImageByID(this.state.currentImage);

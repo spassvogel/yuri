@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import './css/Pop.css';
 import ImageNav from './ImageNav';
-// import './font-awesome/css/font-awesome.min.css';
-// import './font-awesome/fonts/FontAwesome.otf';
-// import './font-awesome/fonts/fontawesome-webfont.eot';
-// import './font-awesome/fonts/fontawesome-webfont.svg';
-// import './font-awesome/fonts/fontawesome-webfont.ttf';
-// import './font-awesome/fonts/fontawesome-webfont.woff';
-// import './font-awesome/fonts/fontawesome-webfont.woff2';
 
 class App extends Component {
 	constructor(props) {
@@ -52,10 +44,12 @@ class App extends Component {
 						<div className="text">
 							<span>{this.currentImage ? this.currentImageText : instructionText }</span>
 						</div>
-						<i className={`fa ${this.state.playing ? 'fa-pause-circle-o' : 'fa-play-circle-o'} play-pause-icon `} 
+						<i className={`fa ${this.state.playing ? 'fa-play-circle-o' : 'fa-pause-circle-o'} play-pause-icon `} 
 							aria-hidden="true"
-							ref={(cmp) => { if(!this.iconPlayPause) this.iconPlayPause = cmp; }} />
+							ref={(cmp) => { this.iconPlayPause = cmp; }}
+							style= { { visibility: this.currentImage ? "visible" : "hidden" }} 
 						/>
+						
 					</div>
 			</div>
 		);
@@ -68,7 +62,13 @@ class App extends Component {
 	}
 
 	componentDidUpdate(prevProps, prevState) {
-		if(/*!prevState.playing && */this.state.playing){
+		if(this.state.playing){
+			if(!this.currentImage){
+				this.setState({
+					currentImage: this.props.images[0].id
+				});
+			}
+
 			window.clearInterval(this.intervalId);
 			this.intervalId = window.setInterval(() => {
 				this.refs.imageNav.selectNext();
@@ -78,7 +78,7 @@ class App extends Component {
 				this.restartPlayPauseAnimation();
 			}
 		}
-		else if (!this.state.playing){
+		else if (!this.state.playing && this.currentImage){
       		window.clearInterval(this.intervalId);
 
 			if(prevState.playing){

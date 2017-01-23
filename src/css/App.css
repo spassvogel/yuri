@@ -91,22 +91,34 @@ body {
 }
 
 @-webkit-keyframes pop {
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+ 0% {
+    opacity: 1;
+  }
+  15% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  30% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes pop {
   0% {
     opacity: 1;
   }
-  10% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+  15% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
   }
-  20% {
+  30% {
     -webkit-transform: scale(1);
     transform: scale(1);
+    opacity: 1;
   }
   100% {
     opacity: 0;
